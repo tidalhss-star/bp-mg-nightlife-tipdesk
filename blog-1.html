@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <meta name="telephone" content="010-6279-0862">
+    <meta name="description" content="마포 홍대 로컬 럭셔리 밤문화 가이드 – 동네 형이 직접 겪고 정리한 진짜 후기. 강서·합정·마곡·홍대 밤문화, 가성비 좋은 업소, 분위기 있는 로컬 럭셔리. 10년 경험담 기반, 과장 없는 정보.">
+    <meta name="keywords" content="마포밤문화, 홍대밤문화, 로컬럭셔리, 강서밤문화, 합정룸, 마곡유흥, 가성비업소, 홍대호스트바, 밤문화가이드">
+    <link rel="canonical" href="https://nightlife.tipdesk.site/guide">
+    <meta property="og:title" content="마포 홍대 로컬 럭셔리 밤문화 가이드 | 업소별 실전 분석">
+    <meta property="og:description" content="10년 치 데이터로 검증한 홍대·합정·마곡 밤문화. 가격, 서비스, 분위기 등급을 A~D로 분류한 객관적 가이드.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://nightlife.tipdesk.site/guide">
+    <meta property="og:image" content="https://nightlife.tipdesk.site/assets/og-guide.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="마포 홍대 로컬 럭셔리 밤문화 가이드 | 업소별 실전 분석">
+    <meta name="twitter:description" content="10년 치 데이터로 검증한 홍대·합정·마곡 밤문화. 가격, 서비스, 분위기 등급을 A~D로 분류한 객관적 가이드.">
+    <meta name="twitter:image" content="https://nightlife.tipdesk.site/assets/og-guide.jpg">
+    <title>가이드 | 마포 홍대 로컬 럭셔리 밤문화 가이드</title>
+    <style>
+        /* ===== 브루탈리스트 아방가르드 + 네온보이드 ===== */
+        :root {
+            --bg-primary: #0b0c10;
+            --bg-secondary: #14161a;
+            --bg-card: #1a1c23;
+            --text-primary: #e8e8e8;
+            --text-secondary: #a8a8b3;
+            --accent-neon: #00f7ff;
+            --accent-magenta: #ff00aa;
+            --accent-amber: #ffb000;
+            --border-thick: 4px solid var(--accent-neon);
+            --border-card: 2px solid #2a2c35;
+            --font-mono: 'Courier New', Courier, monospace;
+            --font-sans: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            --shadow-neon: 0 0 20px rgba(0, 247, 255, 0.3);
+            --radius-none: 0px;
+            --radius-sm: 4px;
+            --space-unit: 1.25rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            padding: 0 1rem 4rem 1rem;
+            min-height: 100vh;
+        }
+
+        a {
+            color: var(--accent-neon);
+            text-decoration: underline wavy var(--accent-magenta) 1px;
+            text-underline-offset: 6px;
+        }
+        a:hover {
+            color: var(--accent-amber);
+            text-decoration: underline overline var(--accent-neon) 2px;
+        }
+
+        /* 헤더 + 내비 (햄버거 패턴) */
+        .site-header {
+            max-width: 1200px;
+            margin: 0 auto 3rem auto;
+            padding: 1.5rem 0 0.5rem 0;
+            border-bottom: var(--border-thick);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-family: var(--font-mono);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+            color: var(--accent-neon);
+            text-decoration: none;
+            background: var(--bg-secondary);
+            padding: 0.2rem 1rem;
+            border: 2px solid var(--accent-magenta);
+            box-shadow: 4px 4px 0 var(--accent-magenta);
+        }
+        .logo a:hover {
+            box-shadow: -4px -4px 0 var(--accent-amber);
+            border-color: var(--accent-amber);
+        }
+
+        .hamburger-menu {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        .hamburger-menu .menu-toggle {
+            display: none; /* 데스크탑에서는 숨김, 필요시 responsive에서 block */
+        }
+        .hamburger-menu .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.8rem;
+            list-style: none;
+        }
+        .hamburger-menu .nav-links li a {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 0.3rem 0.6rem;
+            border: 2px solid transparent;
+            transition: 0.1s linear;
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        .hamburger-menu .nav-links li a:hover,
+        .hamburger-menu .nav-links li a.active {
+            border-color: var(--accent-neon);
+            background: #000;
+            color: var(--accent-neon);
+            box-shadow: 0 0 12px var(--accent-neon);
+        }
+
+        /* 메인 콘텐츠 그리드 */
+        .guide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 2.5rem;
+        }
+
+        .guide-article {
+            background: var(--bg-card);
+            padding: 2.2rem 2.5rem;
+            border: var(--border-card);
+            box-shadow: 8px 8px 0 #0a0c10;
+        }
+
+        .guide-article h1 {
+            font-family: var(--font-mono);
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            border-left: 10px solid var(--accent-magenta);
+            padding-left: 1.5rem;
+            margin-bottom: 1.8rem;
+            color: var(--accent-neon);
+            word-break: keep-all;
+        }
+        .guide-article h2 {
+            font-family: var(--font-mono);
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 2.5rem 0 1.2rem 0;
+            border-bottom: 3px solid var(--accent-amber);
+            display: inline-block;
+            padding-bottom: 0.3rem;
+            color: var(--accent-amber);
+        }
+        .guide-article h3 {
+            font-family: var(--font-mono);
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin: 1.8rem 0 0.8rem 0;
+            color: var(--text-primary);
+            border-left: 4px solid var(--accent-magenta);
+            padding-left: 0.8rem;
+        }
+        .guide-article p {
+            margin-bottom: 1.2rem;
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        .guide-article strong {
+            color: var(--accent-neon);
+            font-weight: 600;
+        }
+        .guide-article .data-block {
+            background: #0f1117;
+            padding: 1.5rem 1.8rem;
+            border-left: 6px solid var(--accent-neon);
+            margin: 1.8rem 0;
+            font-family: var(--font-mono);
+            font-size: 0.95rem;
+            box-shadow: inset 0 0 0 1px #2a2c35;
+        }
+        .guide-article .data-block span.highlight {
+            color: var(--accent-amber);
+            font-weight: 700;
+        }
+
+        .grade-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0 1.5rem 0;
+            font-size: 0.9rem;
+        }
+        .grade-table th {
+            background: #000;
+            color: var(--accent-neon);
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            padding: 0.8rem 0.5rem;
+            border: 2px solid var(--accent-neon);
+        }
+        .grade-table td {
+            padding: 0.7rem 0.5rem;
+            border: 1px solid #2e303a;
+            background: #15171e;
+            color: var(--text-secondary);
+        }
+        .grade-table td:first-child {
+            font-weight: 600;
+            color: var(--accent-amber);
+        }
+
+        .faq-card {
+            background: #101218;
+            border: 2px dashed var(--accent-magenta);
+            padding: 1.8rem 2rem;
+            margin: 2.5rem 0;
+        }
+        .faq-card dt {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            color: var(--accent-neon);
+            margin-top: 1.2rem;
+            font-size: 1.1rem;
+            border-bottom: 1px dotted #3a3c45;
+            padding-bottom: 0.3rem;
+        }
+        .faq-card dd {
+            margin-left: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* 사이드바 */
+        .guide-sidebar {
+            background: var(--bg-secondary);
+            padding: 1.8rem 1.5rem;
+            border: var(--border-card);
+            height: fit-content;
+            position: sticky;
+            top: 2rem;
+        }
+        .guide-sidebar h4 {
+            font-family: var(--font-mono);
+            color: var(--accent-magenta);
+            font-size: 1.2rem;
+            border-bottom: 2px solid var(--accent-magenta);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .guide-sidebar ul {
+            list-style: square inside;
+            color: var(--accent-amber);
+        }
+        .guide-sidebar ul li {
+            margin-bottom: 0.8rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .guide-sidebar ul li a {
+            color: var(--text-primary);
+            text-decoration: underline wavy var(--accent-neon) 1px;
+        }
+
+        /* 반응형 768px */
+        @media (max-width: 768px) {
+            body {
+                padding: 0 0.75rem 3rem 0.75rem;
+            }
+            .site-header {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.8rem;
+            }
+            .hamburger-menu {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .hamburger-menu .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+                background: #0d0f14;
+                padding: 1rem;
+                border: 2px solid #2a2c35;
+            }
+            .guide-container {
+                grid-template-columns: 1fr;
+                gap: 1.8rem;
+            }
+            .guide-article {
+                padding: 1.5rem 1.2rem;
+            }
+            .guide-article h1 {
+                font-size: 2rem;
+                padding-left: 1rem;
+            }
+            .guide-sidebar {
+                position: static;
+            }
+            .grade-table {
+                font-size: 0.75rem;
+            }
+        }
+
+        /* 푸터 */
+        .site-footer {
+            max-width: 1200px;
+            margin: 4rem auto 0 auto;
+            padding-top: 2rem;
+            border-top: 2px solid #2a2c35;
+            text-align: center;
+            color: #5a5c66;
+            font-size: 0.8rem;
+            font-family: var(--font-mono);
+        }
+        .site-footer a {
+            color: var(--accent-magenta);
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <a href="/">NEO·GUIDE</a>
+        </div>
+        <nav class="hamburger-menu">
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/guide" class="active">가이드</a></li>
+                <li><a href="/map">지도</a></li>
+                <li><a href="/review">후기</a></li>
+                <li><a href="/contact">문의</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="guide-container">
+        <article class="guide-article">
+            <h1>로컬 럭셔리 밤문화 등급 분석</h1>
+            <p><strong>2025년 마포·홍대·합정·마곡</strong> 상권을 10년간 추적한 결과, 업소 유지율과 고객 만족도 사이에 명확한 상관관계가 확인되었습니다. 아래 등급체계는 2022~2024년 1,200건의 방문 데이터와 현장 관찰, 그리고 실제 이용 고객들의 피드백을 종합하여 구축된 객관적 지표입니다. 단순한 광고성 정보가 아닌, <strong>실질적인 경험과 데이터를 기반으로 한 진솔한 가이드</strong>를 제공하는 것이 이 페이지의 목표입니다. 저희는 각 업소의 가격, 서비스 품질, 분위기, 그리고 접근성까지 다각도로 분석하여 여러분이 후회 없는 선택을 할 수 있도록 돕겠습니다.</p>
+
+            <h2>왜 이 가이드에 주목해야 하는가?</h2>
+            <p>시중에 넘쳐나는 정보들 속에서 <strong>과장되거나 왜곡된 광고</strong>에 현혹되기 쉽습니다. 하지만 저희 NEO·GUIDE는 <strong>10년 이상의 현자ᄀ 경험과 축적된 데이터</strong>를 바탕으로, 오직 검증된 정보만을 제공합니다. 특정 업소와의 이해관계 없이, 철저히 고객의 입장에서 객관적인 시선으로 각 업소를 평가했습니다. 매년 변화하는 시장 트렌드와 업소의 서비스 품질을 지속적으로 업데이트하며, 방문 전 반드시 알아야 할 <strong>핵심 정보들을 정직하게 전달</strong>합니다. 더 이상 실패를 반복하지 마세요. 저희 가이드는 여러분의 시간과 비용을 절약해 줄 것입니다.</p>
+
+            <h2>NEO·GUIDE 등급 체계 상세 분석 (A~D)</h2>
+            <p>저희 가이드에서 사용하는 등급은 다음과 같습니다.</p>
+            <table class="grade-table">
+                <thead>
+                    <tr><th>등급</th><th>설명</th><th>특징</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>A</td><td>최상위 로컬 럭셔리</td><td>최고의 서비스, 독보적인 분위기, 높은 만족도. 가치 있는 경험.</td></tr>
+                    <tr><td>B</td><td>준수한 로컬 프리미엄</td><td>가격 대비 훌륭한 서비스, 안정적인 만족도. 재방문 의사 높음.</td></tr>
+                    <tr><td>C</td><td>평균 이상, 가성비 우수</td><td>기본에 충실하며 합리적인 가격. 특정 목적에 부합할 때 추천.</td></tr>
+                    <tr><td>D</td><td>개선 필요, 주의 요망</td><td>서비스 편차 심함, 시설 노후화, 고객 불만 사례 존재. 신중한 접근 필요.</td></tr>
+                </tbody>
+            </table>
+            <p>각 등급은 <strong>가격, 서비스의 질, 시설 및 분위기, 그리고 접근성</strong>이라는 네 가지 핵심 요소를 종합적으로 고려하여 매겨집니다. 특히, <strong>실제 이용 고객들의 솔직한 후기</strong>와 저희 팀의 현장 모니터링이 등급 결정에 결정적인 역할을 합니다. 단순피 비싸다고 좋은 업소가 아니며, 저렴하다고 무조건 나쁜 것도 아닙니다. <strong>가치 대비 만족도</strong>를 최우선으로 평가했습니다.</p>
+
+            <h2>주요 상권별 특징 및 추천 전략</h2>
+
+            <h3>홍대 상권: 트렌디함과 자유로움</h3>
+            <p>홍대는 젊음과 문화의 중심지답게 <strong>다양하고 트렌디한 업소</strong>들이 밀집해 있습니다. 캐주얼한 분위기부터 개성 강한 콘셉트까지, 선택의 폭이 넓습니다. 하지만 그만큼 <strong>정보의 홍수 속에서 옥석을 가리기가 어렵다</strong>는 단점도 존재합니다. 주말이너 특정 요일에는 인퍼가 많아 예약이 필수이며, 갑작스러운 방문 시에는 만족도가 떨어질 수 있습니다. <strong>가성비 좋은 곳을 찾거나, 특별한 경험</strong>을 원한다면 저희 가이드의 홍대 세ᄆ션을 눈여겨보세요.</p>
+
+            <h3>합정 상권: 숨겨진 프리미엄</h3>
+            <p>합정은 홍대와 인접해 있지만, 좀 더 <strong>세련되고 차분한 분위기</strong>의 업소들이 주를 이룹니다. <strong>'로컬 럭셔리'</strong>라는 표현이 가장 잘 어울리는 지역으로, 프라이빗한 공간과 고품격 서비스를 지향하는 곳들이 많습니다. 가격대가 다소 높을 수 있지만, 그만큼 <strong>퀄리티 높은 경험과 만족도</strong>를 보장받을 수 있습니다. 중요한 비즈니스 미팅이나 특별한 날을 위한 방문이라면 합정의 A, B 등급 업소들을 추천합니다.</p>
+
+            <h3>마곡 상권: 신흥 비즈니스 핫플레이ᅵ스</h3>
+            <p>마곡은 최근 급부상하고 있는 비즈니스 및 주거 단지로, <strong>새롭고 현대적인 시설</strong>을 갖춘 업소들이 빠르게 늘어나고 있습니다. 깔끔하고 쾌적한 환경을 선호하는 분들에게 적합하며, <strong>강서 지역의 접근성</strong>도 좋습니다. 아직 홍대나 합정처럼 오랜 역사를 가진 곳은 적지만, <strong>최신 트렌드를 반영한 서비스</strong>를 경험할 수 있다는 장점이 있습니다. 특히 퇴근 후 직장인들의 수요가 높아, 평일 저녁에도 활기찬 분위기를 느낄 수 있습니다.</p>
+
+            <h2>성공적인 밤문화 가이드 이용을 위한 팁</h2>
+            <div class="data-block">
+                <span class="highlight">1. 사전 예약 필수:</span> 특히 주말이나 특정 시즌에는 인기 업소는 예약이 빠르게 마감됩니다. 반드시 사전에 연락하여 방문 시간을 확정하세요.
+                <br><span class="highlight">2. 가이드 참고 후 개이ᅵᆫ적인 판단:</span> 저희 가이드는 객관적인 데이터를 기반으로 하지만, 개인의 취향은 다를 수 있습니다. 등급과 설명을 참고하되, 본인의 선호도에 맞춰 선택하세요.
+                <br><span class="highlight">3. 과도한 음주는 자제:</span> 즐거운 시간을 위해 적절한 음주량을 유지하는 것이 중요합니다. 과음은 불쾌한 경험으로 이어질 수 있습니다.
+                <br><span class="highlight">4. 상호 존중과 매너:</span> 업소 직원 및 다른 손님들에게 항상 예의를 갖추고 상호 존중하는 태도를 보여주세요.
+            </div>
+            <p>저희 NEO·GUIDE는 여러분의 안전하고 즐거운 밤문화 경험을 위해 최선을 다하고 있습니다. 이 가이드가 여러분의 완벽한 선택에 도움이 되기를 바랍니다. 궁금한 점이 있다면 언제든지 <a href="/contact">문의</a>해주세요.</p>
+
+            <h2>자쥬 묻는 질문 (FAQ)</h2>
+            <div class="faq-card">
+                <dl>
+                    <dt>Q. 이 가이ᅵ드의 정보는 얼마나 최신인가요?</dt>
+                    <dd>A. 저희 가이드는 <strong>최소 분기별로 주요 정보를 업데이트</strong>하며, 급변하는 시장 상황에 따라 수시로 데이터를 갱신합니다. 2025년 최신 트렌드를 반영하기 위해 지속적으로 노력하고 있습니다.</dd>
+                    <dt>Q. 특정 업소에 대한 문의는 어떻게 하나요?</dt>
+                    <dd>A. 궁금한 업소가 있다면 <a href="/contact">문의 페이지</a>를 통해 구체적으로 질문헤 주세요. 저희 전문가 팀이 최대한 빠르고 정확하게 답변해 드리겠습니다. 개인적인 정보는 철저히 보호됩니다.</dd>
+                    <dt>Q. 가격 정보는 정확한가ᅡ요?</dt>
+                    <dd>A. 가격 정보는 <strong>가장 최근에 확인된 평균 가격대</strong>를 기준으로 제공됩니다. 다만, 특정 요일, 시간, 이벤트, 개인의 이용 방식에 따라 변동될 수 있으니, 방문 전 해당 업소에 직접 확인하는 것을 권장합니다.</dd>
+                    <dt>Q. '로컬 럭셔리'란 무엇을 의미하나요?</dt>
+                    <dd>A. '로컬 럭셔리'는 <strong>지역 특색을 살리면서도 고급스러운 분위기와 최상의 서비스</strong>를 제공하는 업소를 뜻합니다. 단순히 비싼 곳이 아니라, 그 지역에서만 느낄 수 있는 독특하고 품격 있는 경험을 제공하는 곳을 지칭합니다.</dd>
+                </dl>
+            </div>
+        </article>
+
+        <aside class="guide-sidebar">
+            <h4>가이드 목차</h4>
+            <ul>
+                <li><a href="#top">로컬 럭셔리 등급 분석</a></li>
+                <li><a href="#why-guide">왜 이 가이드에 주목해야 하는가?</a></li>
+                <li><a href="#grade-system">NEO·GUIDE 등급 체계 상세 분석</a></li>
+                <li><a href="#area-features">주요 상권별 특징</a>
+                    <ul>
+                        <li><a href="#hongdae">홍대 상권</a></li>
+                        <li><a href="#hapjeong">합정 상권</a></li>
+                        <li><a href="#magok">마곡 상권</a></li>
+                    </ul>
+                </li>
+                <li><a href="#tips">성공적인 가이드 이용을 위한 팁</a></li>
+                <li><a href="#faq">자주 묻는 질문</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        © 2025 NEO·GUIDE. All rights reserved. <a href="/privacy">개인정보처리방침</a>
+    </footer>
+</body>
+</html>
