@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://nightlife.tipdesk.site/sitemap.xml
+Sitemap: https://nightlife.tipdesk.site/sitemap-pages.xml
