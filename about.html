@@ -1,870 +1,868 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-neon-void">
-    <meta name="telephone" content="010-6279-0862">
-    <meta name="description" content="마포 홍대 로컬 럭셔리 밤문화 가이드 – 동네 형이 직접 겪고 정리한 진짜 후기. 강서·합정·마곡·홍대 밤문화, 가성비 좋은 업소, 분위기 있는 로컬 럭셔리. 10년 경험담 기반, 과장 없는 정보.">
-    <meta name="keywords" content="마포밤문화, 홍대밤문화, 로컬럭셔리, 강서밤문화, 합정룸, 마곡유흥, 가성비업소, 홍대호스트바, 밤문화가이드">
-    <link rel="canonical" href="https://nightlife.tipdesk.site/about.html">
-    <meta property="og:title" content="소개 | 마포 홍대 로컬 럭셔리 밤문화 가이드">
-    <meta property="og:description" content="마포 홍대 로컬 럭셔리 밤문화 가이드 – 동네 형이 직접 겪고 정리한 진짜 후기. 강서·합정·마곡·홍대 밤문화, 가성비 좋은 업소, 분위기 있는 로컬 럭셔리. 10년 경험담 기반, 과장 없는 정보.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nightlife.tipdesk.site/about.html">
-    <meta property="og:image" content="https://nightlife.tipdesk.site/og-image.jpg">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="소개 | 마포 홍대 로컬 럭셔리 밤문화 가이드">
-    <meta name="twitter:description" content="10년간 현장에서 직접 발로 뛰며 기록한 마포·홍대 밤문화 분석서. 데이터 기반 객관적 정보만을 제공합니다.">
-    <title>소개 | 마포 홍대 로컬 럭셔리 밤문화 가이드</title>
-    <style>
-        :root {
-            --neon-cyan: #00f0ff;
-            --neon-magenta: #ff00aa;
-            --neon-lime: #39ff14;
-            --void-black: #0a0a0f;
-            --void-dark: #12121c;
-            --void-gray: #1e1e2e;
-            --void-light: #2a2a3e;
-            --text-primary: #e0e0ff;
-            --text-secondary: #a0a0c0;
-            --text-accent: #00f0ff;
-            --border-neon: 2px solid #00f0ff;
-            --border-magenta: 2px solid #ff00aa;
-            --shadow-neon: 0 0 15px rgba(0,240,255,0.3), 0 0 30px rgba(0,240,255,0.1);
-            --shadow-magenta: 0 0 15px rgba(255,0,170,0.3);
-            --font-mono: 'Courier New', 'Consolas', monospace;
-            --font-sans: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: var(--void-black);
-            color: var(--text-primary);
-            font-family: var(--font-sans);
-            line-height: 1.7;
-            overflow-x: hidden;
-            min-height: 100vh;
-        }
-
-        .wrapper {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 20px;
-            position: relative;
-        }
-
-        /* 헤더 */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--void-light);
-            position: relative;
-            z-index: 100;
-        }
-
-        .logo {
-            font-family: var(--font-mono);
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--neon-cyan);
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            text-shadow: var(--shadow-neon);
-            cursor: pointer;
-        }
-
-        .logo span {
-            color: var(--neon-magenta);
-        }
-
-        .hamburger-menu {
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 32px;
-            height: 24px;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 0;
-            z-index: 200;
-        }
-
-        .hamburger-menu span {
-            display: block;
-            width: 100%;
-            height: 3px;
-            background: var(--neon-cyan);
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger-menu.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-            background: var(--neon-magenta);
-        }
-
-        .hamburger-menu.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger-menu.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(8px, -8px);
-            background: var(--neon-magenta);
-        }
-
-        .nav {
-            display: flex;
-            gap: 8px;
-        }
-
-        .nav a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 8px 16px;
-            border: 1px solid transparent;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav a:hover, .nav a.active {
-            color: var(--neon-cyan);
-            border-color: var(--neon-cyan);
-            box-shadow: var(--shadow-neon);
-            background: rgba(0,240,255,0.05);
-        }
-
-        .nav a.active {
-            background: rgba(0,240,255,0.1);
-            color: var(--neon-cyan);
-        }
-
-        /* 메인 콘텐츠 */
-        .hero-section {
-            padding: 80px 0 60px;
-            text-align: center;
-            border-bottom: 1px solid var(--void-light);
-            margin-bottom: 60px;
-            position: relative;
-        }
-
-        .hero-section::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--neon-cyan), var(--neon-magenta), transparent);
-        }
-
-        .hero-title {
-            font-family: var(--font-mono);
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--neon-cyan);
-            text-transform: uppercase;
-            letter-spacing: 6px;
-            text-shadow: var(--shadow-neon);
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero-title span {
-            color: var(--neon-magenta);
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto;
-            font-family: var(--font-mono);
-            letter-spacing: 1px;
-        }
-
-        .hero-subtitle em {
-            color: var(--neon-lime);
-            font-style: normal;
-        }
-
-        /* 소개 섹션 */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            margin-bottom: 80px;
-            position: relative;
-        }
-
-        .about-grid::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: 1px;
-            background: linear-gradient(180deg, transparent, var(--neon-cyan), transparent);
-            transform: translateX(-50%);
-        }
-
-        .about-left, .about-right {
-            padding: 20px;
-        }
-
-        .about-left {
-            border-right: 1px solid var(--void-light);
-            padding-right: 40px;
-        }
-
-        .about-right {
-            padding-left: 40px;
-        }
-
-        .section-label {
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            color: var(--neon-magenta);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        .about-heading {
-            font-family: var(--font-mono);
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 24px;
-            line-height: 1.3;
-        }
-
-        .about-heading .highlight {
-            color: var(--neon-cyan);
-            text-shadow: var(--shadow-neon);
-        }
-
-        .about-text {
-            color: var(--text-secondary);
-            font-size: 1.05rem;
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .about-text strong {
-            color: var(--text-primary);
-        }
-
-        .about-text a {
-            color: var(--neon-cyan);
-            text-decoration: none;
-            border-bottom: 1px solid var(--neon-cyan);
-        }
-
-        .about-text a:hover {
-            color: var(--neon-magenta);
-            border-color: var(--neon-magenta);
-        }
-
-        /* 데이터 카드 */
-        .data-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin: 60px 0;
-        }
-
-        .data-card {
-            background: var(--void-dark);
-            border: 1px solid var(--void-light);
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .data-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .data-card:hover {
-            border-color: var(--neon-cyan);
-            box-shadow: var(--shadow-neon);
-            transform: translateY(-5px);
-        }
-
-        .data-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .data-number {
-            font-family: var(--font-mono);
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--neon-cyan);
-            text-shadow: var(--shadow-neon);
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .data-number span {
-            color: var(--neon-magenta);
-        }
-
-        .data-label {
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .data-desc {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-top: 10px;
-            line-height: 1.5;
-        }
-
-        /* 타임라인 */
-        .timeline {
-            position: relative;
-            padding: 40px 0;
-            margin: 60px 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 30px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, var(--neon-cyan), var(--neon-magenta), var(--neon-lime));
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 80px;
-            margin-bottom: 50px;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 22px;
-            top: 6px;
-            width: 18px;
-            height: 18px;
-            background: var(--void-black);
-            border: 3px solid var(--neon-cyan);
-            border-radius: 50%;
-            box-shadow: var(--shadow-neon);
-        }
-
-        .timeline-item:nth-child(2)::before {
-            border-color: var(--neon-magenta);
-            box-shadow: var(--shadow-magenta);
-        }
-
-        .timeline-item:nth-child(3)::before {
-            border-color: var(--neon-lime);
-            box-shadow: 0 0 15px rgba(57,255,20,0.3);
-        }
-
-        .timeline-year {
-            font-family: var(--font-mono);
-            font-size: 1rem;
-            color: var(--neon-cyan);
-            font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-        }
-
-        .timeline-item:nth-child(2) .timeline-year {
-            color: var(--neon-magenta);
-        }
-
-        .timeline-item:nth-child(3) .timeline-year {
-            color: var(--neon-lime);
-        }
-
-        .timeline-content {
-            background: var(--void-dark);
-            border: 1px solid var(--void-light);
-            padding: 20px 25px;
-            border-radius: 4px;
-        }
-
-        .timeline-title {
-            font-family: var(--font-mono);
-            font-size: 1.1rem;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-        }
-
-        .timeline-desc {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* FAQ */
-        .faq-section {
-            margin: 80px 0;
-            padding: 40px 0;
-            border-top: 1px solid var(--void-light);
-            border-bottom: 1px solid var(--void-light);
-        }
-
-        .faq-title {
-            font-family: var(--font-mono);
-            font-size: 2rem;
-            color: var(--neon-cyan);
-            text-align: center;
-            margin-bottom: 50px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            text-shadow: var(--shadow-neon);
-        }
-
-        .faq-item {
-            background: var(--void-dark);
-            border: 1px solid var(--void-light);
-            margin-bottom: 15px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-question {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 25px;
-            cursor: pointer;
-            font-family: var(--font-mono);
-            font-size: 1.05rem;
-            color: var(--text-primary);
-            background: var(--void-dark);
-            border: none;
-            width: 100%;
-            text-align: left;
-            transition: color 0.3s ease;
-        }
-
-        .faq-question:hover {
-            color: var(--neon-cyan);
-        }
-
-        .faq-question .icon {
-            font-size: 1.5rem;
-            color: var(--neon-magenta);
-            transition: transform 0.3s ease;
-        }
-
-        .faq-item.active .faq-question .icon {
-            transform: rotate(45deg);
-            color: var(--neon-cyan);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
-            padding: 0 25px; /* Initial padding, will expand */
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 200px; /* Adjust as needed for content */
-            padding: 15px 25px 25px;
-        }
-
-        /* 풋터 */
-        .footer {
-            background: var(--void-black);
-            border-top: 1px solid var(--void-light);
-            padding: 40px 0;
-            text-align: center;
-            color: var(--text-secondary);
-            font-family: var(--font-mono);
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            margin-top: 60px;
-            position: relative;
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: -1px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--neon-magenta), var(--neon-cyan), transparent);
-        }
-
-        .footer-logo {
-            font-size: 1.2rem;
-            color: var(--neon-cyan);
-            text-shadow: var(--shadow-neon);
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .footer-logo span {
-            color: var(--neon-magenta);
-        }
-
-        .contact-info {
-            margin-top: 15px;
-            font-size: 0.9rem;
-        }
-
-        .contact-info a {
-            color: var(--neon-lime);
-            text-decoration: none;
-            margin: 0 5px;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        /* 반응형 */
-        @media (max-width: 1024px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-            .about-left, .about-right {
-                padding-right: 20px;
-                padding-left: 20px;
-                border-right: none;
-            }
-            .about-grid::before {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 80px; /* Adjust based on header height */
-                right: 20px;
-                background: var(--void-dark);
-                border: 1px solid var(--neon-cyan);
-                box-shadow: var(--shadow-neon);
-                width: 200px;
-                padding: 15px 0;
-                z-index: 150;
-            }
-
-            .nav.active {
-                display: flex;
-            }
-
-            .nav a {
-                padding: 12px 20px;
-                width: 100%;
-                text-align: left;
-                border: none;
-            }
-
-            .hamburger-menu {
-                display: flex;
-            }
-
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            .data-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline::before {
-                left: 15px;
-            }
-
-            .timeline-item {
-                padding-left: 60px;
-            }
-
-            .timeline-item::before {
-                left: 7px;
-                width: 16px;
-                height: 16px;
-            }
-
-            .faq-question {
-                font-size: 0.95rem;
-                padding: 15px 20px;
-            }
-            .faq-answer {
-                font-size: 0.85rem;
-                padding: 0 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .logo {
-                font-size: 1.4rem;
-            }
-            .hero-title {
-                font-size: 2rem;
-                letter-spacing: 4px;
-            }
-            .hero-subtitle {
-                font-size: 0.9rem;
-            }
-            .about-heading {
-                font-size: 1.5rem;
-            }
-            .about-text {
-                font-size: 0.95rem;
-            }
-            .data-number {
-                font-size: 2.5rem;
-            }
-            .data-label {
-                font-size: 0.75rem;
-            }
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+ <meta name="telephone" content="010-6279-0862">
+ <meta name="description" content="마포 홍대 로컬 럭셔리 밤문화 가이드 – 동네 형이 직접 겪고 정리한 진짜 후기. 강서·합정·마곡·홍대 밤문화, 가성비 좋은 업소, 분위기 있는 로컬 럭셔리. 10년 경험담 기반, 과장 없는 정보.">
+ <meta name="keywords" content="마포밤문화, 홍대밤문화, 로컬럭셔리, 강서밤문화, 합정룸, 마곡유흥, 가성비업소, 홍대호스트바, 밤문화가이드">
+ <link rel="canonical" href="https://nightlife.tipdesk.site/about.html">
+ <meta property="og:title" content="소개 | 마포 홍대 로컬 럭셔리 밤문화 가이드">
+ <meta property="og:description" content="마포 홍대 로컬 럭셔리 밤문화 가이드 – 동네 형이 직접 겪고 정리한 진짜 후기. 강서·합정·마곡·홍대 밤문화, 가성비 좋은 업소, 분위기 있는 로컬 럭셔리. 10년 경험담 기반, 과장 없는 정보.">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://nightlife.tipdesk.site/about.html">
+ <meta property="og:image" content="https://nightlife.tipdesk.site/og-image.jpg">
+ <meta name="twitter:card" content="summary">
+ <meta name="twitter:title" content="소개 | 마포 홍대 로컬 럭셔리 밤문화 가이드">
+ <meta name="twitter:description" content="10년간 현장에서 직접 발로 뛰며 기록한 마포·홍대 밤문화 분석서. 데이터 기반 객관적 정보만을 제공합니다.">
+ <title>소개 | 마포 홍대 로컬 럭셔리 밤문화 가이드</title>
+ <style>
+ :root {
+ --neon-cyan: #00f0ff;
+ --neon-magenta: #ff00aa;
+ --neon-lime: #39ff14;
+ --void-black: #0a0a0f;
+ --void-dark: #12121c;
+ --void-gray: #1e1e2e;
+ --void-light: #2a2a3e;
+ --text-primary: #e0e0ff;
+ --text-secondary: #a0a0c0;
+ --text-accent: #00f0ff;
+ --border-neon: 2px solid #00f0ff;
+ --border-magenta: 2px solid #ff00aa;
+ --shadow-neon: 0 0 15px rgba(0,240,255,0.3), 0 0 30px rgba(0,240,255,0.1);
+ --shadow-magenta: 0 0 15px rgba(255,0,170,0.3);
+ --font-mono: 'Courier New', 'Consolas', monospace;
+ --font-sans: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+ }
+
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ background: var(--void-black);
+ color: var(--text-primary);
+ font-family: var(--font-sans);
+ line-height: 1.7;
+ overflow-x: hidden;
+ min-height: 100vh;
+ }
+
+ .wrapper {
+ max-width: 1280px;
+ margin: 0 auto;
+ padding: 20px;
+ position: relative;
+ }
+
+ /* 헤더 */
+ .header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 20px 0;
+ border-bottom: 1px solid var(--void-light);
+ position: relative;
+ z-index: 100;
+ }
+
+ .logo {
+ font-family: var(--font-mono);
+ font-size: 1.8rem;
+ font-weight: 700;
+ color: var(--neon-cyan);
+ text-transform: uppercase;
+ letter-spacing: 4px;
+ text-shadow: var(--shadow-neon);
+ cursor: pointer;
+ }
+
+ .logo span {
+ color: var(--neon-magenta);
+ }
+
+ .hamburger-menu {
+ display: none;
+ flex-direction: column;
+ justify-content: space-between;
+ width: 32px;
+ height: 24px;
+ cursor: pointer;
+ background: none;
+ border: none;
+ padding: 0;
+ z-index: 200;
+ }
+
+ .hamburger-menu span {
+ display: block;
+ width: 100%;
+ height: 3px;
+ background: var(--neon-cyan);
+ border-radius: 2px;
+ transition: all 0.3s ease;
+ }
+
+ .hamburger-menu.active span:nth-child(1) {
+ transform: rotate(45deg) translate(5px, 5px);
+ background: var(--neon-magenta);
+ }
+
+ .hamburger-menu.active span:nth-child(2) {
+ opacity: 0;
+ }
+
+ .hamburger-menu.active span:nth-child(3) {
+ transform: rotate(-45deg) translate(8px, -8px);
+ background: var(--neon-magenta);
+ }
+
+ .nav {
+ display: flex;
+ gap: 8px;
+ }
+
+ .nav a {
+ color: var(--text-secondary);
+ text-decoration: none;
+ font-family: var(--font-mono);
+ font-size: 0.85rem;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ padding: 8px 16px;
+ border: 1px solid transparent;
+ transition: all 0.3s ease;
+ position: relative;
+ }
+
+ .nav a:hover, .nav a.active {
+ color: var(--neon-cyan);
+ border-color: var(--neon-cyan);
+ box-shadow: var(--shadow-neon);
+ background: rgba(0,240,255,0.05);
+ }
+
+ .nav a.active {
+ background: rgba(0,240,255,0.1);
+ color: var(--neon-cyan);
+ }
+
+ /* 메인 콘텐츠 */
+ .hero-section {
+ padding: 80px 0 60px;
+ text-align: center;
+ border-bottom: 1px solid var(--void-light);
+ margin-bottom: 60px;
+ position: relative;
+ }
+
+ .hero-section::after {
+ content: '';
+ position: absolute;
+ bottom: -1px;
+ left: 0;
+ right: 0;
+ height: 2px;
+ background: linear-gradient(90deg, transparent, var(--neon-cyan), var(--neon-magenta), transparent);
+ }
+
+ .hero-title {
+ font-family: var(--font-mono);
+ font-size: 3.5rem;
+ font-weight: 700;
+ color: var(--neon-cyan);
+ text-transform: uppercase;
+ letter-spacing: 6px;
+ text-shadow: var(--shadow-neon);
+ margin-bottom: 20px;
+ line-height: 1.2;
+ }
+
+ .hero-title span {
+ color: var(--neon-magenta);
+ }
+
+ .hero-subtitle {
+ font-size: 1.2rem;
+ color: var(--text-secondary);
+ max-width: 700px;
+ margin: 0 auto;
+ font-family: var(--font-mono);
+ letter-spacing: 1px;
+ }
+
+ .hero-subtitle em {
+ color: var(--neon-lime);
+ font-style: normal;
+ }
+
+ /* 소개 섹션 */
+ .about-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 60px;
+ margin-bottom: 80px;
+ position: relative;
+ }
+
+ .about-grid::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ left: 50%;
+ width: 1px;
+ background: linear-gradient(180deg, transparent, var(--neon-cyan), transparent);
+ transform: translateX(-50%);
+ }
+
+ .about-left, .about-right {
+ padding: 20px;
+ }
+
+ .about-left {
+ border-right: 1px solid var(--void-light);
+ padding-right: 40px;
+ }
+
+ .about-right {
+ padding-left: 40px;
+ }
+
+ .section-label {
+ font-family: var(--font-mono);
+ font-size: 0.75rem;
+ color: var(--neon-magenta);
+ text-transform: uppercase;
+ letter-spacing: 3px;
+ margin-bottom: 16px;
+ display: block;
+ }
+
+ .about-heading {
+ font-family: var(--font-mono);
+ font-size: 1.8rem;
+ font-weight: 600;
+ color: var(--text-primary);
+ margin-bottom: 24px;
+ line-height: 1.3;
+ }
+
+ .about-heading .highlight {
+ color: var(--neon-cyan);
+ text-shadow: var(--shadow-neon);
+ }
+
+ .about-text {
+ color: var(--text-secondary);
+ font-size: 1.05rem;
+ margin-bottom: 20px;
+ line-height: 1.8;
+ }
+
+ .about-text strong {
+ color: var(--text-primary);
+ }
+
+ .about-text a {
+ color: var(--neon-cyan);
+ text-decoration: none;
+ border-bottom: 1px solid var(--neon-cyan);
+ }
+
+ .about-text a:hover {
+ color: var(--neon-magenta);
+ border-color: var(--neon-magenta);
+ }
+
+ /* 데이터 카드 */
+ .data-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 30px;
+ margin: 60px 0;
+ }
+
+ .data-card {
+ background: var(--void-dark);
+ border: 1px solid var(--void-light);
+ padding: 30px;
+ text-align: center;
+ transition: all 0.3s ease;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .data-card::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 3px;
+ background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
+ transform: scaleX(0);
+ transition: transform 0.3s ease;
+ }
+
+ .data-card:hover {
+ border-color: var(--neon-cyan);
+ box-shadow: var(--shadow-neon);
+ transform: translateY(-5px);
+ }
+
+ .data-card:hover::before {
+ transform: scaleX(1);
+ }
+
+ .data-number {
+ font-family: var(--font-mono);
+ font-size: 3rem;
+ font-weight: 700;
+ color: var(--neon-cyan);
+ text-shadow: var(--shadow-neon);
+ margin-bottom: 10px;
+ display: block;
+ }
+
+ .data-number span {
+ color: var(--neon-magenta);
+ }
+
+ .data-label {
+ font-family: var(--font-mono);
+ font-size: 0.85rem;
+ color: var(--text-secondary);
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ }
+
+ .data-desc {
+ color: var(--text-secondary);
+ font-size: 0.9rem;
+ margin-top: 10px;
+ line-height: 1.5;
+ }
+
+ /* 타임라인 */
+ .timeline {
+ position: relative;
+ padding: 40px 0;
+ margin: 60px 0;
+ }
+
+ .timeline::before {
+ content: '';
+ position: absolute;
+ left: 30px;
+ top: 0;
+ bottom: 0;
+ width: 2px;
+ background: linear-gradient(180deg, var(--neon-cyan), var(--neon-magenta), var(--neon-lime));
+ }
+
+ .timeline-item {
+ position: relative;
+ padding-left: 80px;
+ margin-bottom: 50px;
+ }
+
+ .timeline-item:last-child {
+ margin-bottom: 0;
+ }
+
+ .timeline-item::before {
+ content: '';
+ position: absolute;
+ left: 22px;
+ top: 6px;
+ width: 18px;
+ height: 18px;
+ background: var(--void-black);
+ border: 3px solid var(--neon-cyan);
+ border-radius: 50%;
+ box-shadow: var(--shadow-neon);
+ }
+
+ .timeline-item:nth-child(2)::before {
+ border-color: var(--neon-magenta);
+ box-shadow: var(--shadow-magenta);
+ }
+
+ .timeline-item:nth-child(3)::before {
+ border-color: var(--neon-lime);
+ box-shadow: 0 0 15px rgba(57,255,20,0.3);
+ }
+
+ .timeline-year {
+ font-family: var(--font-mono);
+ font-size: 1rem;
+ color: var(--neon-cyan);
+ font-weight: 700;
+ letter-spacing: 2px;
+ margin-bottom: 8px;
+ }
+
+ .timeline-item:nth-child(2) .timeline-year {
+ color: var(--neon-magenta);
+ }
+
+ .timeline-item:nth-child(3) .timeline-year {
+ color: var(--neon-lime);
+ }
+
+ .timeline-content {
+ background: var(--void-dark);
+ border: 1px solid var(--void-light);
+ padding: 20px 25px;
+ border-radius: 4px;
+ }
+
+ .timeline-title {
+ font-family: var(--font-mono);
+ font-size: 1.1rem;
+ color: var(--text-primary);
+ margin-bottom: 8px;
+ }
+
+ .timeline-desc {
+ color: var(--text-secondary);
+ font-size: 0.95rem;
+ line-height: 1.6;
+ }
+
+ /* FAQ */
+ .faq-section {
+ margin: 80px 0;
+ padding: 40px 0;
+ border-top: 1px solid var(--void-light);
+ border-bottom: 1px solid var(--void-light);
+ }
+
+ .faq-title {
+ font-family: var(--font-mono);
+ font-size: 2rem;
+ color: var(--neon-cyan);
+ text-align: center;
+ margin-bottom: 50px;
+ letter-spacing: 3px;
+ text-transform: uppercase;
+ text-shadow: var(--shadow-neon);
+ }
+
+ .faq-item {
+ background: var(--void-dark);
+ border: 1px solid var(--void-light);
+ margin-bottom: 15px;
+ overflow: hidden;
+ transition: all 0.3s ease;
+ }
+
+ .faq-question {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 18px 25px;
+ cursor: pointer;
+ font-family: var(--font-mono);
+ font-size: 1.05rem;
+ color: var(--text-primary);
+ background: var(--void-dark);
+ border: none;
+ width: 100%;
+ text-align: left;
+ transition: color 0.3s ease;
+ }
+
+ .faq-question:hover {
+ color: var(--neon-cyan);
+ }
+
+ .faq-question .icon {
+ font-size: 1.5rem;
+ color: var(--neon-magenta);
+ transition: transform 0.3s ease;
+ }
+
+ .faq-item.active .faq-question .icon {
+ transform: rotate(45deg);
+ color: var(--neon-cyan);
+ }
+
+ .faq-answer {
+ max-height: 0;
+ overflow: hidden;
+ transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+ padding: 0 25px; /* Initial padding, will expand */
+ color: var(--text-secondary);
+ font-size: 0.95rem;
+ line-height: 1.6;
+ }
+
+ .faq-item.active .faq-answer {
+ max-height: 200px; /* Adjust as needed for content */
+ padding: 15px 25px 25px;
+ }
+
+ /* 풋터 */
+ .footer {
+ background: var(--void-black);
+ border-top: 1px solid var(--void-light);
+ padding: 40px 0;
+ text-align: center;
+ color: var(--text-secondary);
+ font-family: var(--font-mono);
+ font-size: 0.8rem;
+ letter-spacing: 1px;
+ margin-top: 60px;
+ position: relative;
+ }
+
+ .footer::before {
+ content: '';
+ position: absolute;
+ top: -1px;
+ left: 0;
+ right: 0;
+ height: 2px;
+ background: linear-gradient(90deg, transparent, var(--neon-magenta), var(--neon-cyan), transparent);
+ }
+
+ .footer-logo {
+ font-size: 1.2rem;
+ color: var(--neon-cyan);
+ text-shadow: var(--shadow-neon);
+ margin-bottom: 10px;
+ display: block;
+ }
+
+ .footer-logo span {
+ color: var(--neon-magenta);
+ }
+
+ .contact-info {
+ margin-top: 15px;
+ font-size: 0.9rem;
+ }
+
+ .contact-info a {
+ color: var(--neon-lime);
+ text-decoration: none;
+ margin: 0 5px;
+ }
+
+ .contact-info a:hover {
+ text-decoration: underline;
+ }
+
+ /* 반응형 */
+ @media (max-width: 1024px) {
+ .about-grid {
+ grid-template-columns: 1fr;
+ }
+ .about-left, .about-right {
+ padding-right: 20px;
+ padding-left: 20px;
+ border-right: none;
+ }
+ .about-grid::before {
+ display: none;
+ }
+ }
+
+ @media (max-width: 768px) {
+ .nav {
+ display: none;
+ flex-direction: column;
+ position: absolute;
+ top: 80px; /* Adjust based on header height */
+ right: 20px;
+ background: var(--void-dark);
+ border: 1px solid var(--neon-cyan);
+ box-shadow: var(--shadow-neon);
+ width: 200px;
+ padding: 15px 0;
+ z-index: 150;
+ }
+
+ .nav.active {
+ display: flex;
+ }
+
+ .nav a {
+ padding: 12px 20px;
+ width: 100%;
+ text-align: left;
+ border: none;
+ }
+
+ .hamburger-menu {
+ display: flex;
+ }
+
+ .hero-title {
+ font-size: 2.5rem;
+ }
+
+ .hero-subtitle {
+ font-size: 1rem;
+ }
+
+ .data-grid {
+ grid-template-columns: 1fr;
+ }
+
+ .timeline::before {
+ left: 15px;
+ }
+
+ .timeline-item {
+ padding-left: 60px;
+ }
+
+ .timeline-item::before {
+ left: 7px;
+ width: 16px;
+ height: 16px;
+ }
+
+ .faq-question {
+ font-size: 0.95rem;
+ padding: 15px 20px;
+ }
+ .faq-answer {
+ font-size: 0.85rem;
+ padding: 0 20px;
+ }
+ }
+
+ @media (max-width: 480px) {
+ .logo {
+ font-size: 1.4rem;
+ }
+ .hero-title {
+ font-size: 2rem;
+ letter-spacing: 4px;
+ }
+ .hero-subtitle {
+ font-size: 0.9rem;
+ }
+ .about-heading {
+ font-size: 1.5rem;
+ }
+ .about-text {
+ font-size: 0.95rem;
+ }
+ .data-number {
+ font-size: 2.5rem;
+ }
+ .data-label {
+ font-size: 0.75rem;
+ }
+ }
+ </style>
 </head>
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="logo">BPAAS <span>NIGHT</span></div>
-            <button class="hamburger-menu" aria-label="메뉴 열기/닫기">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="nav">
-                <a href="#" class="active">소개</a>
-                <a href="#">정보</a>
-                <a href="#">업소</a>
-                <a href="#">문의</a>
-            </nav>
-        </header>
+ <div class="wrapper">
+ <header class="header">
+ <div class="logo">소셜 밤문화 매개체 안내 <span>NIGHT</span></div>
+ <button class="hamburger-menu" aria-label="메뉴 열기/닫기">
+ <span></span>
+ <span></span>
+ <span></span>
+ </button>
+ <nav class="nav">
+ <a href="#" class="active">소개</a>
+ <a href="#">정보</a>
+ <a href="#">업소</a>
+ <a href="#">문의</a>
+ </nav>
+ </header>
 
-        <main>
-            <section class="hero-section">
+ <main>
+ <section class="hero-section">
 
 <!-- SEO Visual 1: 마포 홍대 로컬 럭셔리 밤문화 가이드 Brutalist Avant-Garde Hero -->
-<div class="seo-visual-hero" role="img" aria-label="신뢰할 수 있는 서비스 —  마포 홍대 로컬 럭셔리 밤문화 가이드" 
-     style="width:100%;padding:120px 0 60px 0;background:#ffffff;text-align:left;margin:0;position:relative">
-  <div style="max-width:1100px;margin:0 auto;padding:0 24px">
-    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.4em;color:#000000;margin-bottom:24px;text-transform:uppercase">/ PERSPECTIVE DECONSTRUCTED</div>
-    <div style="font-size:7.5vw;line-height:0.95;font-weight:900;font-family:serif;color:#000000;letter-spacing:-0.05em;margin:0 0 32px 0;text-transform:uppercase">마포 홍대 로컬 럭셔리 밤문화 가이드</div>
-    <p style="font-size:1.1rem;line-height:1.7;color:#000000;max-width:550px;font-weight:300;margin:0">신뢰할 수 있는 서비스</p>
-  </div>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"마포 홍대 로컬 럭셔리 밤문화 가이드","description":"신뢰할 수 있는 서비스","contentUrl":"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22/>"}</script>
+<div class="seo-visual-hero" role="img" aria-label="신뢰할 수 있는 서비스 — 마포 홍대 로컬 럭셔리 밤문화 가이드" 
+ style="width:100%;padding:120px 0 60px 0;background:#ffffff;text-align:left;margin:0;position:relative">
+ <div style="max-width:1100px;margin:0 auto;padding:0 24px">
+ <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.4em;color:#000000;margin-bottom:24px;text-transform:uppercase">/ PERSPECTIVE DECONSTRUCTED</div>
+ <div style="font-size:7.5vw;line-height:0.95;font-weight:900;font-family:serif;color:#000000;letter-spacing:-0.05em;margin:0 0 32px 0;text-transform:uppercase">마포 홍대 로컬 럭셔리 밤문화 가이드</div>
+ <p style="font-size:1.1rem;line-height:1.7;color:#000000;max-width:550px;font-weight:300;margin:0">신뢰할 수 있는 서비스</p>
+ </div>
+ <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageObject","name":"마포 홍대 로컬 럭셔리 밤문화 가이드","description":"신뢰할 수 있는 서비스","contentUrl":"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22/>"}</script>
 </div>
-                <h1 class="hero-title">마포 홍대 <span>로컬 럭셔리</span> 밤문화 가이드</h1>
-                <p class="hero-subtitle"><em>10년</em> 현장 경험 기반, 과장 없는 <em>진짜 정보</em>를 제공합니다.</p>
-            </section>
+ <h1 class="hero-title">마포 홍대 <span>로컬 럭셔리</span> 밤문화 가이드</h1>
+ <p class="hero-subtitle"><em>10년</em> 현장 경험 기반, 과장 없는 <em>진짜 정보</em>를 제공합니다.</p>
+ </section>
 
 <!-- SEO Visual 2: 소셜 밤문화 매개체 Brutalist Typography Cards -->
 <div class="seo-visual-cards" role="img" aria-label="마포 홍대 로컬 럭셔리 밤문화 가이드 소셜 밤문화 매개체 — 신뢰할 수 있는 서비스" 
-     style="display:flex;flex-direction:column;gap:80px;margin:120px auto;max-width:1100px;padding:0 24px">
-  <div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
-    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">01</div>
-    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">SEO 대책</div>
-    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">마포 홍대 로컬 럭셔리 밤문화 가이드</div>
-  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
-    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">02</div>
-    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">집객 지원</div>
-    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">마포 홍대 로컬 럭셔리 밤문화 가이드</div>
-  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
-    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">03</div>
-    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">분석</div>
-    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">마포 홍대 로컬 럭셔리 밤문화 가이드</div>
-  </div>
+ style="display:flex;flex-direction:column;gap:80px;margin:120px auto;max-width:1100px;padding:0 24px">
+ <div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+ <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">01</div>
+ <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">SEO 대책</div>
+ <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">마포 홍대 로컬 럭셔리 밤문화 가이드</div>
+ </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+ <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">02</div>
+ <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">집객 지원</div>
+ <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">마포 홍대 로컬 럭셔리 밤문화 가이드</div>
+ </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+ <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">03</div>
+ <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">분석</div>
+ <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">마포 홍대 로컬 럭셔리 밤문화 가이드</div>
+ </div>
 </div>
 
-            <section class="about-section">
-                <div class="about-grid">
-                    <div class="about-left">
-                        <span class="section-label">우리의 철학</span>
-                        <h2 class="about-heading">
-                            '동네 형'이 직접 겪고 정리한 <span class="highlight">진짜 후기</span>
-                        </h2>
-                        <p class="about-text">
-                            이 가이드는 단순한 정보 나열을 넘어, 10년간 마포와 홍대 일대 밤문화를 직접 경험하고 분석한 '동네 형'의 철학이 담겨 있습니다. 복잡하고 빠르게 변하는 유흥 환경 속에서, 방문객들이 겪을 수 있는 시행착오를 줄이고 최적의 경험을 할 수 있도록 돕는 것이 이 가이드의 핵심 가치입니다. 과장 광고나 허위 정보 없이, 오직 솔직하고 객관적인 사실만을 전달하는 것을 목표로 하며, 이는 수많은 발품과 깊이 있는 통찰을 통해 얻어진 결과물입니다. 여러분의 소중한 시간과 비용이 헛되지 않도록 최선을 다해 정보를 검증하고 제공합니다.
-                        </p>
-                    </div>
-                    <div class="about-right">
-                        <span class="section-label">무엇을 제공하는가</span>
-                        <h2 class="about-heading">
-                            로컬 럭셔리와 <span class="highlight">가성비</span>의 완벽한 조화
-                        </h2>
-                        <p class="about-text">
-                            우리는 단순히 비싼 곳만 추천하지 않습니다. '로컬 럭셔리'는 화려함만을 쫓는 것이 아니라, 지역 특유의 정취와 품격을 갖추면서도 방문객에게 진정성 있는 경험을 선사하는 곳을 의미합니다. 여기에 합리적인 '가성비'까지 겸비한 업소들을 엄선하여 소개합니다. 강서, 합정, 마곡, 홍대 등 서북부 지역 각 상권의 특색을 면밀히 분석하고, 수많은 업소들을 직접 방문하여 검증한 결과만을 담았습니다. 숨겨진 보석 같은 룸살롱, 가라오케, 호스트바는 물론, 분위기 좋은 라운지바와 이색적인 밤문화 공간까지, 여러분의 취향과 목적에 맞는 최적의 선택지를 제안하여 잊지 못할 밤을 만들어 드릴 것입니다.
-                        </p>
-                    </div>
-                </div>
-            </section>
+ <section class="about-section">
+ <div class="about-grid">
+ <div class="about-left">
+ <span class="section-label">우리의 철학</span>
+ <h2 class="about-heading">
+ '동네 형'이 직접 겪고 정리한 <span class="highlight">진짜 후기</span>
+ </h2>
+ <p class="about-text">
+ 이 가이드는 단순한 정보 나열을 넘어, 10년간 마포와 홍대 일대 밤문화를 직접 경험하고 분석한 '동네 형'의 철학이 담겨 있습니다. 복잡하고 빠르게 변하는 유흥 환경 속에서, 방문객들이 겪을 수 있는 시행착오를 줄이고 최적의 경험을 할 수 있도록 돕는 것이 이 가이드의 핵심 가치입니다. 과장 광고나 허위 정보 없이, 오직 솔직하고 객관적인 사실만을 전달하는 것을 목표로 하며, 이는 수많은 발품과 깊이 있는 통찰을 통해 얻어진 결과물입니다. 여러분의 소중한 시간과 비용이 헛되지 않도록 최선을 다해 정보를 검증하고 제공합니다.
+ </p>
+ </div>
+ <div class="about-right">
+ <span class="section-label">무엇을 제공하는가</span>
+ <h2 class="about-heading">
+ 로컬 럭셔리와 <span class="highlight">가성비</span>의 완벽한 조화
+ </h2>
+ <p class="about-text">
+ 우리는 단순히 비싼 곳만 추천하지 않습니다. '로컬 럭셔리'는 화려함만을 쫓는 것이 아니라, 지역 특유의 정취와 품격을 갖추면서도 방문객에게 진정성 있는 경험을 선사하는 곳을 의미합니다. 여기에 합리적인 '가성비'까지 겸비한 업소들을 엄선하여 소개합니다. 강서, 합정, 마곡, 홍대 등 서북부 지역 각 상권의 특색을 면밀히 분석하고, 수많은 업소들을 직접 방문하여 검증한 결과만을 담았습니다. 숨겨진 보석 같은 룸살롱, 가라오케, 호스트바는 물론, 분위기 좋은 라운지바와 이색적인 밤문화 공간까지, 여러분의 취향과 목적에 맞는 최적의 선택지를 제안하여 잊지 못할 밤을 만들어 드릴 것입니다.
+ </p>
+ </div>
+ </div>
+ </section>
 
-            <section class="data-section">
-                <div class="data-grid">
-                    <div class="data-card">
-                        <span class="data-number">10<span>+</span></span>
-                        <span class="data-label">Years of Experience</span>
-                        <p class="data-desc">수많은 밤을 현장에서 보내며 축적된 노하우와 깊은 이해가 담겨 있습니다. 단순한 정보가 아닌 살아있는 경험입니다.</p>
-                    </div>
-                    <div class="data-card">
-                        <span class="data-number">500<span>+</span></span>
-                        <span class="data-label">Verified Establishments</span>
-                        <p class="data-desc">마포, 홍대, 강서, 합정, 마곡 일대의 수많은 업소들을 직접 방문하고 상세히 분석한 결과입니다. 폭넓은 선택지를 제공합니다.</p>
-                    </div>
-                    <div class="data-card">
-                        <span class="data-number">90<span>%</span></span>
-                        <span class="data-label">Customer Satisfaction</span>
-                        <p class="data-desc">가이드를 통해 방문한 고객들의 피드백을 바탕으로, 높은 만족도를 자신합니다. 실패 없는 밤을 약속드립니다.</p>
-                    </div>
-                </div>
-            </section>
+ <section class="data-section">
+ <div class="data-grid">
+ <div class="data-card">
+ <span class="data-number">10<span>+</span></span>
+ <span class="data-label">Years of Experience</span>
+ <p class="data-desc">수많은 밤을 현장에서 보내며 축적된 노하우와 깊은 이해가 담겨 있습니다. 단순한 정보가 아닌 살아있는 경험입니다.</p>
+ </div>
+ <div class="data-card">
+ <span class="data-number">500<span>+</span></span>
+ <span class="data-label">Verified Establishments</span>
+ <p class="data-desc">마포, 홍대, 강서, 합정, 마곡 일대의 수많은 업소들을 직접 방문하고 상세히 분석한 결과입니다. 폭넓은 선택지를 제공합니다.</p>
+ </div>
+ <div class="data-card">
+ <span class="data-number">90<span>%</span></span>
+ <span class="data-label">Customer Satisfaction</span>
+ <p class="data-desc">가이드를 통해 방문한 고객들의 피드백을 바탕으로, 높은 만족도를 자신합니다. 실패 없는 밤을 약속드립니다.</p>
+ </div>
+ </div>
+ </section>
 
-            <section class="timeline-section">
-                <span class="section-label" style="text-align: center; display: block; margin-bottom: 40px;">우리의 여정</span>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <p class="timeline-year">2014-2017</p>
-                        <div class="timeline-content">
-                            <h3 class="timeline-title">초기 탐방 및 정보 수집</h3>
-                            <p class="timeline-desc">마포 홍대 밤문화에 대한 막연한 호기심과 열정으로, 다양한 유흥업소를 탐방하며 기초적인 정보 수집과 시장 조사를 시작했습니다. 이 시기는 단순히 즐기는 것을 넘어, 지역별 특성과 분위기를 파악하는 데 집중했습니다.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <p class="timeline-year">2018-2021</p>
-                        <div class="timeline-content">
-                            <h3 class="timeline-title">데이터 체계화 및 가이드 정립</h3>
-                            <p class="timeline-desc">수집된 정보를 체계화하고, 각 업소의 서비스 품질, 가격 경쟁력, 고객 만족도 등을 기준으로 평가하기 시작했습니다. 이때부터 '가성비'와 '로컬 럭셔리'라는 개념을 정립하며 가이드의 초석을 다졌습니다.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <p class="timeline-year">2022-현재</p>
-                        <div class="timeline-content">
-                            <h3 class="timeline-title">가이드 완성 및 지속적인 업데이트</h3>
-                            <p class="timeline-desc">축적된 데이터와 노하우를 바탕으로, 현재의 '마포 홍대 로컬 럭셔리 밤문화 가이드'를 완성했습니다. 지속적인 업데이트와 현장 검증을 통해 가장 신뢰할 수 있는 정보를 제공하고 있습니다.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+ <section class="timeline-section">
+ <span class="section-label" style="text-align: center; display: block; margin-bottom: 40px;">우리의 여정</span>
+ <div class="timeline">
+ <div class="timeline-item">
+ <p class="timeline-year">2014-2017</p>
+ <div class="timeline-content">
+ <h3 class="timeline-title">초기 탐방 및 정보 수집</h3>
+ <p class="timeline-desc">마포 홍대 밤문화에 대한 막연한 호기심과 열정으로, 다양한 유흥업소를 탐방하며 기초적인 정보 수집과 시장 조사를 시작했습니다. 이 시기는 단순히 즐기는 것을 넘어, 지역별 특성과 분위기를 파악하는 데 집중했습니다.</p>
+ </div>
+ </div>
+ <div class="timeline-item">
+ <p class="timeline-year">2018-2021</p>
+ <div class="timeline-content">
+ <h3 class="timeline-title">데이터 체계화 및 가이드 정립</h3>
+ <p class="timeline-desc">수집된 정보를 체계화하고, 각 업소의 서비스 품질, 가격 경쟁력, 고객 만족도 등을 기준으로 평가하기 시작했습니다. 이때부터 '가성비'와 '로컬 럭셔리'라는 개념을 정립하며 가이드의 초석을 다졌습니다.</p>
+ </div>
+ </div>
+ <div class="timeline-item">
+ <p class="timeline-year">2022-현재</p>
+ <div class="timeline-content">
+ <h3 class="timeline-title">가이드 완성 및 지속적인 업데이트</h3>
+ <p class="timeline-desc">축적된 데이터와 노하우를 바탕으로, 현재의 '마포 홍대 로컬 럭셔리 밤문화 가이드'를 완성했습니다. 지속적인 업데이트와 현장 검증을 통해 가장 신뢰할 수 있는 정보를 제공하고 있습니다.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-            <section class="faq-section">
-                <h2 class="faq-title">자주 묻는 질문</h2>
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Q. 이 가이드는 어떤 정보를 제공하나요?</span>
-                            <span class="icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>저희 가이드는 마포, 홍대, 강서, 합정, 마곡 일대의 룸살롱, 가라오케, 호스트바, 라운지바 등 다양한 밤문화 업소에 대한 솔직하고 객관적인 정보를 제공합니다. 각 업소의 특징, 분위기, 가격대, 서비스 품질, 그리고 방문 팁까지 상세하게 안내하여 고객님의 취향과 목적에 맞는 최적의 선택을 돕습니다.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Q. '로컬 럭셔리'와 '가성비'의 기준은 무엇인가요?</span>
-                            <span class="icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>'로컬 럭셔리'는 단순히 비싼 곳이 아니라, 지역 고유의 정체성과 품격을 갖추면서도 독특하고 세련된 경험을 제공하는 업소를 의미합니다. '가성비'는 투자하는 비용 대비 높은 만족도와 특별한 경험을 얻을 수 있는 곳을 의미하며, 저희는 이러한 두 가지 가치를 모두 충족하는 업소들을 엄선하여 소개하고 있습니다. 불필요한 지출 없이 최고의 만족을 드릴 수 있도록 노력합니다.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Q. 정보의 신뢰성은 어떻게 보장되나요?</span>
-                            <span class="icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>저희 가이드의 모든 정보는 10년 이상 현장을 직접 발로 뛰며 얻은 경험과 데이터를 기반으로 합니다. 과장 광고나 허위 정보는 철저히 배제하고, 주기적인 현장 방문과 고객 피드백을 통해 최신 정보를 업데이트하고 있습니다. '동네 형'의 이름으로 신뢰할 수 있는 정보만을 제공하며, 이는 저희 가이드의 가장 중요한 철학입니다. 객관적이고 사실적인 정보로 여러분의 밤을 안전하고 즐겁게 만들어 드립니다.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Q. 특정 업소를 추천받을 수 있나요?</span>
-                            <span class="icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>네, 물론입니다. 고객님의 예산, 선호하는 분위기, 방문 목적(비즈니스, 친구들과의 모임, 데이트 등)에 따라 맞춤형 업소 추천을 해드립니다. 가이드 내의 연락처(<a href="tel:010-6279-0862">010-6279-0862</a>)로 문의 주시면, 친절하고 상세한 상담을 통해 고객님께 가장 적합한 업소를 안내해 드리겠습니다. 언제든지 부담 없이 연락 주세요.</p>
-                        </div>
-                    </div>
-                </div>
-            
+ <section class="faq-section">
+ <h2 class="faq-title">자주 묻는 질문</h2>
+ <div class="faq-list">
+ <div class="faq-item">
+ <button class="faq-question">
+ <span>Q. 이 가이드는 어떤 정보를 제공하나요?</span>
+ <span class="icon">+</span>
+ </button>
+ <div class="faq-answer">
+ <p>저희 가이드는 마포, 홍대, 강서, 합정, 마곡 일대의 룸살롱, 가라오케, 호스트바, 라운지바 등 다양한 밤문화 업소에 대한 솔직하고 객관적인 정보를 제공합니다. 각 업소의 특징, 분위기, 가격대, 서비스 품질, 그리고 방문 팁까지 상세하게 안내하여 고객님의 취향과 목적에 맞는 최적의 선택을 돕습니다.</p>
+ </div>
+ </div>
+ <div class="faq-item">
+ <button class="faq-question">
+ <span>Q. '로컬 럭셔리'와 '가성비'의 기준은 무엇인가요?</span>
+ <span class="icon">+</span>
+ </button>
+ <div class="faq-answer">
+ <p>'로컬 럭셔리'는 단순히 비싼 곳이 아니라, 지역 고유의 정체성과 품격을 갖추면서도 독특하고 세련된 경험을 제공하는 업소를 의미합니다. '가성비'는 투자하는 비용 대비 높은 만족도와 특별한 경험을 얻을 수 있는 곳을 의미하며, 저희는 이러한 두 가지 가치를 모두 충족하는 업소들을 엄선하여 소개하고 있습니다. 불필요한 지출 없이 최고의 만족을 드릴 수 있도록 노력합니다.</p>
+ </div>
+ </div>
+ <div class="faq-item">
+ <button class="faq-question">
+ <span>Q. 정보의 신뢰성은 어떻게 보장되나요?</span>
+ <span class="icon">+</span>
+ </button>
+ <div class="faq-answer">
+ <p>저희 가이드의 모든 정보는 10년 이상 현장을 직접 발로 뛰며 얻은 경험과 데이터를 기반으로 합니다. 과장 광고나 허위 정보는 철저히 배제하고, 주기적인 현장 방문과 고객 피드백을 통해 최신 정보를 업데이트하고 있습니다. '동네 형'의 이름으로 신뢰할 수 있는 정보만을 제공하며, 이는 저희 가이드의 가장 중요한 철학입니다. 객관적이고 사실적인 정보로 여러분의 밤을 안전하고 즐겁게 만들어 드립니다.</p>
+ </div>
+ </div>
+ <div class="faq-item">
+ <button class="faq-question">
+ <span>Q. 특정 업소를 추천받을 수 있나요?</span>
+ <span class="icon">+</span>
+ </button>
+ <div class="faq-answer">
+ <p>네, 물론입니다. 고객님의 예산, 선호하는 분위기, 방문 목적(비즈니스, 친구들과의 모임, 데이트 등)에 따라 맞춤형 업소 추천을 해드립니다. 가이드 내의 연락처(<a href="tel:010-6279-0862">010-6279-0862</a>)로 문의 주시면, 친절하고 상세한 상담을 통해 고객님께 가장 적합한 업소를 안내해 드리겠습니다. 언제든지 부담 없이 연락 주세요.</p>
+ </div>
+ </div>
+ </div>
+ 
 <div class="seo-visual-divider" role="separator" aria-label="마포 홍대 로컬 럭셔리 밤문화 가이드 구분선" style="margin:80px 0;height:1px;background:#666666;opacity:0.1"></div>
 </section>
-        </main>
+ </main>
 
-        <footer class="footer">
-            <div class="wrapper">
-                <span class="footer-logo">BPAAS <span>NIGHT</span></span>
-                <p>&copy; 2024. All rights reserved. 마포 홍대 로컬 럭셔리 밤문화 가이드.</p>
-                <div class="contact-info">
-                    문의: <a href="tel:010-6279-0862">010-6279-0862</a>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <!-- JavaScript for hamburger menu and FAQ toggle (not provided, but implied by CSS) -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.querySelector('.hamburger-menu');
-            const nav = document.querySelector('.nav');
+ <footer class="footer">
+ <div class="wrapper">
+ <span class="footer-logo">소셜 밤문화 매개체 안내 <span>NIGHT</span></span>
+ <p>&copy; 2024. All rights reserved. 마포 홍대 로컬 럭셔리 밤문화 가이드.</p>
+ <div class="contact-info">
+ 문의: <a href="tel:010-6279-0862">010-6279-0862</a>
+ </div>
+ </div>
+ </footer>
+ </div>
+ <!-- JavaScript for hamburger menu and FAQ toggle (not provided, but implied by CSS) -->
+ <script>
+ document.addEventListener('DOMContentLoaded', function() {
+ const hamburger = document.querySelector('.hamburger-menu');
+ const nav = document.querySelector('.nav');
 
-            if (hamburger) {
-                hamburger.addEventListener('click', function() {
-                    hamburger.classList.toggle('active');
-                    nav.classList.toggle('active');
-                });
-            }
+ if (hamburger) {
+ hamburger.addEventListener('click', function() {
+ hamburger.classList.toggle('active');
+ nav.classList.toggle('active');
+ });
+ }
 
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            faqQuestions.forEach(function(question) {
-                question.addEventListener('click', function() {
-                    const faqItem = this.closest('.faq-item');
-                    faqItem.classList.toggle('active');
-                });
-            });
-        });
-    </script>
+ const faqQuestions = document.querySelectorAll('.faq-question');
+ faqQuestions.forEach(function(question) {
+ question.addEventListener('click', function() {
+ const faqItem = this.closest('.faq-item');
+ faqItem.classList.toggle('active');
+ });
+ });
+ });
+ </script>
 </body>
 </html>
