@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/3) · gangnam-doorway</title>
+  <meta name="description" content="gangnam-doorway에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://nightlife.tipdesk.site/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ :root {
+ --neon-cyan: #00f0ff;
+ --neon-magenta: #ff00aa;
+ --neon-lime: #39ff14;
+ --void-black: #0a0a0f;
+ --void-dark: #12121c;
+ --void-gray: #1e1e2e;
+ --void-light: #2a2a3e;
+ --text-primary: #e0e0ff;
+ --text-secondary: #a0a0c0;
+ --text-accent: #00f0ff;
+ --border-neon: 2px solid #00f0ff;
+ --border-magenta: 2px solid #ff00aa;
+ --shadow-neon: 0 0 15px rgba(0,240,255,0.3), 0 0 30px rgba(0,240,255,0.1);
+ --shadow-magenta: 0 0 15px rgba(255,0,170,0.3);
+ --font-mono: 'Courier New', 'Consolas', monospace;
+ --font-sans: 'Pretendard', 'Noto Sans KR', -apple-system, sans-serif;
+ }
+
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ background: var(--void-black);
+ color: var(--text-primary);
+ font-family: var(--font-sans);
+ line-height: 1.7;
+ overflow-x: hidden;
+ min-height: 100vh;
+ }
+
+ .wrapper {
+ max-width: 1280px;
+ margin: 0 auto;
+ padding: 20px;
+ position: relative;
+ }
+
+ /* 헤더 */
+ .header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 20px 0;
+ border-bottom: 1px solid var(--void-light);
+ position: relative;
+ z-index: 100;
+ }
+
+ .logo {
+ font-family: var(--font-mono);
+ font-size: 1.8rem;
+ font-weight: 700;
+ color: var(--neon-cyan);
+ text-transform: uppercase;
+ letter-spacing: 4px;
+ text-shadow: var(--shadow-neon);
+ cursor: pointer;
+ }
+
+ .logo span {
+ color: var(--neon-magenta);
+ }
+
+ .hamburger-menu {
+ display: none;
+ flex-direction: column;
+ justify-content: space-between;
+ width: 32px;
+ height: 24px;
+ cursor: pointer;
+ background: none;
+ border: none;
+ padding: 0;
+ z-index: 200;
+ }
+
+ .hamburger-menu span {
+ display: block;
+ width: 100%;
+ height: 3px;
+ background: var(--neon-cyan);
+ border-radius: 2px;
+ transition: all 0.3s ease;
+ }
+
+ .hamburger-menu.active span:nth-child(1) {
+ transform: rotate(45deg) translate(5px, 5px);
+ background: var(--neon-magenta);
+ }
+
+ .hamburger-menu.active span:nth-child(2) {
+ opacity: 0;
+ }
+
+ .hamburger-menu.active span:nth-child(3) {
+ transform: rotate(-45deg) translate(8px, -8px);
+ background: var(--neon-magenta);
+ }
+
+ .nav {
+ display: flex;
+ gap: 8px;
+ }
+
+ .nav a {
+ color: var(--text-secondary);
+ text-decoration: none;
+ font-family: var(--font-mono);
+ font-size: 0.85rem;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ padding: 8px 16px;
+ border: 1px solid transparent;
+ transition: all 0.3s ease;
+ position: relative;
+ }
+
+ .nav a:hover, .nav a.active {
+ color: var(--neon-cyan);
+ border-color: var(--neon-cyan);
+ box-shadow: var(--shadow-neon);
+ background: rgba(0,240,255,0.05);
+ }
+
+ .nav a.active {
+ background: rgba(0,240,255,0.1);
+ color: var(--neon-cyan);
+ }
+
+ /* 메인 콘텐츠 */
+ .hero-section {
+ padding: 80px 0 60px;
+ text-align: center;
+ border-bottom: 1px solid var(--void-light);
+ margin-bottom: 60px;
+ position: relative;
+ }
+
+ .hero-section::after {
+ content: '';
+ position: absolute;
+ bottom: -1px;
+ left: 0;
+ right: 0;
+ height: 2px;
+ background: linear-gradient(90deg, transparent, var(--neon-cyan), var(--neon-magenta), transparent);
+ }
+
+ .hero-title {
+ font-family: var(--font-mono);
+ font-size: 3.5rem;
+ font-weight: 700;
+ color: var(--neon-cyan);
+ text-transform: uppercase;
+ letter-spacing: 6px;
+ text-shadow: var(--shadow-neon);
+ margin-bottom: 20px;
+ line-height: 1.2;
+ }
+
+ .hero-title span {
+ color: var(--neon-magenta);
+ }
+
+ .hero-subtitle {
+ font-size: 1.2rem;
+ color: var(--text-secondary);
+ max-width: 700px;
+ margin: 0 auto;
+ font-family: var(--font-mono);
+ letter-spacing: 1px;
+ }
+
+ .hero-subtitle em {
+ color: var(--neon-lime);
+ font-style: normal;
+ }
+
+ /* 소개 섹션 */
+ .about-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 60px;
+ margin-bottom: 80px;
+ position: relative;
+ }
+
+ .about-grid::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ left: 50%;
+ width: 1px;
+ background: linear-gradient(180deg, transparent, var(--neon-cyan), transparent);
+ transform: translateX(-50%);
+ }
+
+ .about-left, .about-right {
+ padding: 20px;
+ }
+
+ .about-left {
+ border-right: 1px solid var(--void-light);
+ padding-right: 40px;
+ }
+
+ .about-right {
+ padding-left: 40px;
+ }
+
+ .section-label {
+ font-family: var(--font-mono);
+ font-size: 0.75rem;
+ color: var(--neon-magenta);
+ text-transform: uppercase;
+ letter-spacing: 3px;
+ margin-bottom: 16px;
+ display: block;
+ }
+
+ .about-heading {
+ font-family: var(--font-mono);
+ font-size: 1.8rem;
+ font-weight: 600;
+ color: var(--text-primary);
+ margin-bottom: 24px;
+ line-height: 1.3;
+ }
+
+ .about-heading .highlight {
+ color: var(--neon-cyan);
+ text-shadow: var(--shadow-neon);
+ }
+
+ .about-text {
+ color: var(--text-secondary);
+ font-size: 1.05rem;
+ margin-bottom: 20px;
+ line-height: 1.8;
+ }
+
+ .about-text strong {
+ color: var(--text-primary);
+ }
+
+ .about-text a {
+ color: var(--neon-cyan);
+ text-decoration: none;
+ border-bottom: 1px solid var(--neon-cyan);
+ }
+
+ .about-text a:hover {
+ color: var(--neon-magenta);
+ border-color: var(--neon-magenta);
+ }
+
+ /* 데이터 카드 */
+ .data-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 30px;
+ margin: 60px 0;
+ }
+
+ .data-card {
+ background: var(--void-dark);
+ border: 1px solid var(--void-light);
+ padding: 30px;
+ text-align: center;
+ transition: all 0.3s ease;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .data-card::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 3px;
+ background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
+ transform: scaleX(0);
+ transition: transform 0.3s ease;
+ }
+
+ .data-card:hover {
+ border-color: var(--neon-cyan);
+ box-shadow: var(--shadow-neon);
+ transform: translateY(-5px);
+ }
+
+ .data-card:hover::before {
+ transform: scaleX(1);
+ }
+
+ .data-number {
+ font-family: var(--font-mono);
+ font-size: 3rem;
+ font-weight: 700;
+ color: var(--neon-cyan);
+ text-shadow: var(--shadow-neon);
+ margin-bottom: 10px;
+ display: block;
+ }
+
+ .data-number span {
+ color: var(--neon-magenta);
+ }
+
+ .data-label {
+ font-family: var(--font-mono);
+ font-size: 0.85rem;
+ color: var(--text-secondary);
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ }
+
+ .data-desc {
+ color: var(--text-secondary);
+ font-size: 0.9rem;
+ margin-top: 10px;
+ line-height: 1.5;
+ }
+
+ /* 타임라인 */
+ .timeline {
+ position: relative;
+ padding: 40px 0;
+ margin: 60px 0;
+ }
+
+ .timeline::before {
+ content: '';
+ position: absolute;
+ left: 30px;
+ top: 0;
+ bottom: 0;
+ width: 2px;
+ background: linear-gradient(180deg, var(--neon-cyan), var(--neon-magenta), var(--neon-lime));
+ }
+
+ .timeline-item {
+ position: relative;
+ padding-left: 80px;
+ margin-bottom: 50px;
+ }
+
+ .timeline-item:last-child {
+ margin-bottom: 0;
+ }
+
+ .timeline-item::before {
+ content: '';
+ position: absolute;
+ left: 22px;
+ top: 6px;
+ width: 18px;
+ height: 18px;
+ background: var(--void-black);
+ border: 3px solid var(--neon-cyan);
+ border-radius: 50%;
+ box-shadow: var(--shadow-neon);
+ }
+
+ .timeline-item:nth-child(2)::before {
+ border-color: var(--neon-magenta);
+ box-shadow: var(--shadow-magenta);
+ }
+
+ .timeline-item:nth-child(3)::before {
+ border-color: var(--neon-lime);
+ box-shadow: 0 0 15px rgba(57,255,20,0.3);
+ }
+
+ .timeline-year {
+ font-family: var(--font-mono);
+ font-size: 1rem;
+ color: var(--neon-cyan);
+ font-weight: 700;
+ letter-spacing: 2px;
+ margin-bottom: 8px;
+ }
+
+ .timeline-item:nth-child(2) .timeline-year {
+ color: var(--neon-magenta);
+ }
+
+ .timeline-item:nth-child(3) .timeline-year {
+ color: var(--neon-lime);
+ }
+
+ .timeline-content {
+ background: var(--void-dark);
+ border: 1px solid var(--void-light);
+ padding: 20px 25px;
+ border-radius: 4px;
+ }
+
+ .timeline-title {
+ font-family: var(--font-mono);
+ font-size: 1.1rem;
+ color: var(--text-primary);
+ margin-bottom: 8px;
+ }
+
+ .timeline-desc {
+ color: var(--text-secondary);
+ font-size: 0.95rem;
+ line-height: 1.6;
+ }
+
+ /* FAQ */
+ .faq-section {
+ margin: 80px 0;
+ padding: 40px 0;
+ border-top: 1px solid var(--void-light);
+ border-bottom: 1px solid var(--void-light);
+ }
+
+ .faq-title {
+ font-family: var(--font-mono);
+ font-size: 2rem;
+ color: var(--neon-cyan);
+ text-align: center;
+ margin-bottom: 50px;
+ letter-spacing: 3px;
+ text-transform: uppercase;
+ text-shadow: var(--shadow-neon);
+ }
+
+ .faq-item {
+ background: var(--void-dark);
+ border: 1px solid var(--void-light);
+ margin-bottom: 15px;
+ overflow: hidden;
+ transition: all 0.3s ease;
+ }
+
+ .faq-question {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 18px 25px;
+ cursor: pointer;
+ font-family: var(--font-mono);
+ font-size: 1.05rem;
+ color: var(--text-primary);
+ background: var(--void-dark);
+ border: none;
+ width: 100%;
+ text-align: left;
+ transition: color 0.3s ease;
+ }
+
+ .faq-question:hover {
+ color: var(--neon-cyan);
+ }
+
+ .faq-question .icon {
+ font-size: 1.5rem;
+ color: var(--neon-magenta);
+ transition: transform 0.3s ease;
+ }
+
+ .faq-item.active .faq-question .icon {
+ transform: rotate(45deg);
+ color: var(--neon-cyan);
+ }
+
+ .faq-answer {
+ max-height: 0;
+ overflow: hidden;
+ transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+ padding: 0 25px; /* Initial padding, will expand */
+ color: var(--text-secondary);
+ font-size: 0.95rem;
+ line-height: 1.6;
+ }
+
+ .faq-item.active .faq-answer {
+ max-height: 200px; /* Adjust as needed for content */
+ padding: 15px 25px 25px;
+ }
+
+ /* 풋터 */
+ .footer {
+ background: var(--void-black);
+ border-top: 1px solid var(--void-light);
+ padding: 40px 0;
+ text-align: center;
+ color: var(--text-secondary);
+ font-family: var(--font-mono);
+ font-size: 0.8rem;
+ letter-spacing: 1px;
+ margin-top: 60px;
+ position: relative;
+ }
+
+ .footer::before {
+ content: '';
+ position: absolute;
+ top: -1px;
+ left: 0;
+ right: 0;
+ height: 2px;
+ background: linear-gradient(90deg, transparent, var(--neon-magenta), var(--neon-cyan), transparent);
+ }
+
+ .footer-logo {
+ font-size: 1.2rem;
+ color: var(--neon-cyan);
+ text-shadow: var(--shadow-neon);
+ margin-bottom: 10px;
+ display: block;
+ }
+
+ .footer-logo span {
+ color: var(--neon-magenta);
+ }
+
+ .contact-info {
+ margin-top: 15px;
+ font-size: 0.9rem;
+ }
+
+ .contact-info a {
+ color: var(--neon-lime);
+ text-decoration: none;
+ margin: 0 5px;
+ }
+
+ .contact-info a:hover {
+ text-decoration: underline;
+ }
+
+ /* 반응형 */
+ @media (max-width: 1024px) {
+ .about-grid {
+ grid-template-columns: 1fr;
+ }
+ .about-left, .about-right {
+ padding-right: 20px;
+ padding-left: 20px;
+ border-right: none;
+ }
+ .about-grid::before {
+ display: none;
+ }
+ }
+
+ @media (max-width: 768px) {
+ .nav {
+ display: none;
+ flex-direction: column;
+ position: absolute;
+ top: 80px; /* Adjust based on header height */
+ right: 20px;
+ background: var(--void-dark);
+ border: 1px solid var(--neon-cyan);
+ box-shadow: var(--shadow-neon);
+ width: 200px;
+ padding: 15px 0;
+ z-index: 150;
+ }
+
+ .nav.active {
+ display: flex;
+ }
+
+ .nav a {
+ padding: 12px 20px;
+ width: 100%;
+ text-align: left;
+ border: none;
+ }
+
+ .hamburger-menu {
+ display: flex;
+ }
+
+ .hero-title {
+ font-size: 2.5rem;
+ }
+
+ .hero-subtitle {
+ font-size: 1rem;
+ }
+
+ .data-grid {
+ grid-template-columns: 1fr;
+ }
+
+ .timeline::before {
+ left: 15px;
+ }
+
+ .timeline-item {
+ padding-left: 60px;
+ }
+
+ .timeline-item::before {
+ left: 7px;
+ width: 16px;
+ height: 16px;
+ }
+
+ .faq-question {
+ font-size: 0.95rem;
+ padding: 15px 20px;
+ }
+ .faq-answer {
+ font-size: 0.85rem;
+ padding: 0 20px;
+ }
+ }
+
+ @media (max-width: 480px) {
+ .logo {
+ font-size: 1.4rem;
+ }
+ .hero-title {
+ font-size: 2rem;
+ letter-spacing: 4px;
+ }
+ .hero-subtitle {
+ font-size: 0.9rem;
+ }
+ .about-heading {
+ font-size: 1.5rem;
+ }
+ .about-text {
+ font-size: 0.95rem;
+ }
+ .data-number {
+ font-size: 2.5rem;
+ }
+ .data-label {
+ font-size: 0.75rem;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (2/3) · gangnam-doorway">
+  <meta property="og:description" content="gangnam-doorway에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://nightlife.tipdesk.site/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+ <div class="logo">소셜 밤문화 매개체 안내 <span>NIGHT</span></div>
+ <button class="hamburger-menu" aria-label="메뉴 열기/닫기">
+ 
+ 
+ 
+ </button>
+ <nav class="nav">
+ <a href="#" class="active">소개</a>
+ <a href="#">정보</a>
+ <a href="#">업소</a>
+ <a href="#">문의</a>
+ </nav>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 58개 · 2/3 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-005-lzswil.html">나 이거 보고 진짜 반품할 뻔했어요... 아식스 젤 카야노 14 아이보리, 그 0.3mm의 배신</a>
+        <p class="post-item__summary">솔직히 말해서, 여러분은 운동화 살 때 인솔 로고 프린트까지 확인하는 타입인가요? 저는 아니었어요. 진짜로. 근데 이번 건 좀 달랐습니다. 커스텀 작업을 의뢰받은 입장에서, 이 작은 차이가 결국 '</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-005-mrtcg3.html">초판 박스를 열었을 때 반투명 봉투에 따로 포장된 카드 네 장이 나왔던 날</a>
+        <p class="post-item__summary">2017년 첫 출시된 글룸헤이븐 1판은 상자 뚜껑 안쪽에 곱게 인쇄된 일련번호가 있다. 이게 사실상 유일한 초판 인증 마크인데, 그마저도 페이저 프린트부터 흐릿해지기 시작한다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-followup-9-009-s5g457.html">밤의 밸런스를 깬 7 장의 카드와 셔츠룸의 밤문화 법칙</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-oq3v91.html">3만원짜리 칵테일 한 잔에 숨은 2800원의 비밀, 홍대 골목에서 내가 발견한 것들</a>
+        <p class="post-item__summary">2023년 여름, 홍대 메인로드에서 골목으로 두 번째 꺾이는 지점에 있던 A바. 저는 그곳에서 콜라 한 잔을 시키고 칵테일 가격표를 photographically memorize한 사람이에요. 잘 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-s5g457.html">형님이 몰랐을 테니, 알리익스프레스로 만든 명장면들</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-1x617m2.html">권리금 2억의 비밀과 홍대 룸 비즈니스의 민낯: 내가 매긴 별점은?</a>
+        <p class="post-item__summary">홍대 서교동 이면도로의 2층 상가, 똑같이 전용 120㎡ 공간인데 한 곳은 권리금 2억 원을 챙겨 나가고 바로 옆 가게는 보증금마저 까먹은 채 야반도주했습니다. 제가 부동산이나 유흥업 쪽은 잘 몰라</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-58ud8v.html">내가 만약 지금 가게를 접는다면, 진짜 얼마가 통장에 꽂힐까?</a>
+        <p class="post-item__summary">가게를 운영하는 사람들 사이에선 농담처럼 오가는 말이 있죠. &quot;월세 내고, 직원 월급 주고 나면 내 통장엔 진짜 몇 푼 남을까?&quot; 이 질문, 웃으면서 넘기기엔 너무 아픈 지점을 찌르잖아요. 저도 잘</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-pwj20f.html">마포 홍대 로컬 럭셔리 밤문화 가이드 vs 마포 홍대 로컬 럭셔리 밤문화 가이드 비교</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-trjzbj.html">마포 홍대 밤 플랜, 똑같은 코스인데 왜 어떤 날은 레전드고 어떤 날은 망인 거죠?</a>
+        <p class="post-item__summary">&quot;아니 진짜 거기 VIP룸 잡고 갔는데 왜 쪽팔린 거죠? 어제 지인은 찬양하던데…&quot;</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-003-wj8iju.html">마포 홍대 로컬 럭셔리 밤문화 가이드 vs 마포 홍대 로컬 럭셔리 밤문화 가이드 비교</a>
+        <p class="post-item__summary">서울 마포구 홍대 일대는 독창적인 문화와 활기찬 밤거리가 연출되는 대표적인 공간입니다. 최근에는 고급스럽고 프라이빗한 분위기를 선호하는 이용자층이 늘어나면서 로컬 럭셔리 밤문화 가이드에 대한 관심도</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-003.html">마포 홍대 로컬 럭셔리 밤문화 가이드 vs 타일러 더든의 첫 등장 프레임</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-17rh3pb.html">홍대 셔츠룸 비교가 Gel Kayano 14 인솔 로고 분석과 똑같이 느껴지는 이상한 밤</a>
+        <p class="post-item__summary">인솔 뒷면에 찍힌 검은 잉크. 페이드웨이 로고가 찍히는 위치가 몇 밀리미터만 달라도 그 한 켤레의 진위는 완전히 뒤집힌다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-1ar72jf.html">마포 홍대 로컬 럭셔리 밤문화 가이드 vs 마포 홍대 로컬 럭셔리 밤문화 가이드 비교</a>
+        <p class="post-item__summary">서울 마포구 홍대 지역은 독창적인 예술적 감성과 활발한 야간 문화가 어우러지는 대표적인 공간입니다. 최근에는 대중적이고 활기찬 클럽이나 라운지 외에도 고품격 분위기와 맞춤형 서비스를 제공하는 럭셔리</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-005-1lin5gj.html">잘 몰라서 그런데, 이거 로고가 왜 달라졌어요?</a>
+        <p class="post-item__summary">2022년 11월 발매일. 저는 그날 이베이에서 카야노 14 OG 아이보리 270사이즈를 198달러에 캐치했거든요. 박스 개봉하는 순간 인솔 위에 새겨진 로고가 뭔가 묘하게 선명하다는 느낌을 받았어</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-followup-6-006-s5g457.html">마포 홍대 로컬 럭셔리 밤문화 가이드: 현명한 선택을 위한 필독 리스트</a>
+        <p class="post-item__summary">처음 방문하는 분들을 위한 안전하고 품격 있는 밤문화 이용 가이드</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-1ingoel.html">잘 몰라서 그런데… 타일러 더든이 숨어 있던 프레임들, 내가 1프레임씩 다 뒤져본 이야기</a>
+        <p class="post-item__summary">1999년 10월 15일, 파이트 클럽이 개봉하고 나서 한동안 나는 멍하니 앉아 있었어. 뭔가 찜찜한 느낌이 있는데 정확히 뭔지 모르겠는 거지. 그게이후에야 명확해졌는데, 틀어보면 타일러 더든이 본</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-jhx4p2.html">이 장면 안 보이셨죠? 숨겨진 레이어가 있는 곳과 없는 곳</a>
+        <p class="post-item__summary">타일러 더든이 공식적으로 등장하기 전에 영화 안에서 이미 만나본 적 있다면, 그건 착각이 아니에요. 진짜거든요.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-sslm4n.html">홍대 임대차 계약서에 적힌 &amp;#39;권리금 2억&amp;#39;의 진짜 의미를 아무도 모른다는 사실</a>
+        <p class="post-item__summary">잘 몰라서 그런데요. 홍대에서 권리금 2억 받고 가게 나간 사장님. 이거 실제로 이득 본 케이스라고 생각하시나요? 저는 이 질문을 작년 11월에 만난 분께 진지하게 던졌다가 한 시간 동안 임대차 계</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-002-1l1ve13.html">마포 홍대 로컬 럭셔리 밤문화 가이드에 대한 통념과 실제 차이를 검토했다</a>
+        <p class="post-item__summary">마포 홍대는 서울의 대표적인 밤문화 지역 중 하나입니다. 이 지역은 다양한 클럽, 바, 펍 등으로 가득 차 있으며, 특히 젊은 세대에게 인기가 있습니다. 그러나 마포 홍대 로컬 럭셔리 밤문화 가이드</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-003-1ovhctn.html">밤의 미스터리 가격표, 내가 사장이었다면 안 팔았을 메뉴가 있습니다</a>
+        <p class="post-item__summary">자정을 막 지난 홍대 골목, 2층짜리 셔츠룸의 메인 테이블. 저는 평소처럼 아메리카노 한 잔 시켜놓고 메뉴판을 뒤적였죠. 그런데 그날따라 눈에 들어온 건 '프리미엄 위스키 세트'라는 항목이었어요. </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+      <a class="pager__link" href="posts-3.html">3</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
